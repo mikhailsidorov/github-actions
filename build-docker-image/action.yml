@@ -1,0 +1,20 @@
+name: "Build docker image"
+
+description: "Build and push docker image"
+
+inputs:
+  docker_registry:
+    description: "Docker registry address"
+    required: true
+
+  docker_registry_user:
+    description: "Docker registry user"
+    required: true
+
+  docker_registry_password:
+    description: "Docker registry password"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
